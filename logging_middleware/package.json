@@ -1,0 +1,14 @@
+{
+  "name": "logging-middleware",
+  "version": "1.0.0",
+  "description": "Async, non-blocking logging middleware for the evaluation-service Log API",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/logger.test.js"
+  },
+  "keywords": ["logging", "middleware", "evaluation"],
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

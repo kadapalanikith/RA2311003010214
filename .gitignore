@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# Environment files — NEVER commit real .env
+.env
+.env.local
+.env.production
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build outputs
+dist/
+coverage/
+.nyc_output/
+
+# ── Files that must NEVER go to GitHub ──────────────────────────────────────
+# Contains real credentials (clientID, clientSecret, JWT token)
+donttouch.md
+
+# Contains real credentials + personal name
+TESTING_GUIDE.md
+
+# Evaluation task sheets — mention Affordmed (violates submission rules)
+backend.md
+pretestSetup.md
+deployment.md
+# Local helper guides — not part of the submission
+GIT_COMMIT_GUIDE.md
