@@ -232,3 +232,52 @@ npm test
 - **Compound indexes** — designed to exactly cover the Stage 3 slow query
 - **Cache-aside pattern** — invalidated on write, TTL fallback for safety
 - **Bulk notification** — batch-based queue design described in Stage 5
+
+---
+
+## API Screenshots (Postman)
+
+> Each screenshot shows: request body · response · response time
+
+### Vehicle Maintenance Scheduler
+
+**GET /health — 200 OK · 25ms**
+
+![GET /health](./screenshots/Screenshot%202026-05-02%20122724.png)
+
+**GET /schedule — All Depots · 200 OK · 447ms**
+
+![GET /schedule all depots](./screenshots/Screenshot%202026-05-02%20122744.png)
+
+**GET /schedule/3 — Single Depot · 200 OK · 1.04s**
+
+![GET /schedule/3 single depot](./screenshots/Screenshot%202026-05-02%20122810.png)
+
+---
+
+### Notification Backend
+
+**GET /health — 200 OK · 56ms · db: connected**
+
+![GET /health notification](./screenshots/Screenshot%202026-05-02%20122831.png)
+
+**POST /api/notifications — 201 Created · 404ms**
+
+![POST /api/notifications create](./screenshots/Screenshot%202026-05-02%20123006.png)
+
+**GET /api/notifications/inbox — 200 OK · 129ms**
+
+![GET /notifications/inbox priority inbox](./screenshots/Screenshot%202026-05-02%20123031.png)
+
+---
+
+### Evaluation Service APIs
+
+**GET /evaluation-service/vehicles — 200 OK · 176ms**
+
+![GET /vehicles evaluation service](./screenshots/Screenshot%202026-05-02%20122617.png)
+
+**GET /evaluation-service/notifications — 200 OK · 641ms**
+
+![GET /notifications evaluation service](./screenshots/Screenshot%202026-05-02%20122644.png)
+
